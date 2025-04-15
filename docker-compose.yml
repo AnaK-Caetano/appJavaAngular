@@ -1,6 +1,6 @@
 services:
-  # ----Front-end
-  ui:
+  # ----Frontend
+  client:
     build:
       context: ./frontend
     ports:
@@ -13,7 +13,7 @@ services:
     networks:
       - desafio-amigos-net
 
-  # ----Back-end
+  # ----Backend
   apiApplication:
       build:
         context: ./backend   
@@ -33,7 +33,7 @@ services:
       networks:
         - desafio-amigos-net
 
-  # ----Banco de dados
+  # ----Database
   db:
     image: postgres:17.2
     environment:
